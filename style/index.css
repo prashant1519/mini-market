@@ -1,0 +1,12 @@
+#con{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  gap: 10px;
+   
+ }
+
+ img{
+    height: 400px;
+ }
+ 
