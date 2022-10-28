@@ -4,7 +4,7 @@ var rec=JSON.parse(localStorage.getItem("cart"))
 var rig=document.getElementById("right")
 rig.innerText=rec.length
 
-rec.map(function(ele){
+rec.map(function(ele,index){
   
     var div =document.createElement("div")
 
@@ -18,8 +18,19 @@ rec.map(function(ele){
     let pr=document.createElement("p")
     pr.innerText=ele.price
 
+    let ad=document.createElement("button")
+    ad.innerText="REMOVE"
+    ad.addEventListener("click",function(){
+        // console.log("ioo");
+        rec.splice(index,1)
+        localStorage.setItem("cart",JSON.stringify(rec))
+        window.location.reload()
+    })
+
     
-    div.append(image,nam,pr)
+
+    
+    div.append(image,nam,pr,ad)
 
     document.querySelector("#cart").append(div)
 

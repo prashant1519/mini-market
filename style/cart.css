@@ -16,3 +16,9 @@ img{
     height: 400px;
  }
  
+ #check{
+    height: 40px;
+    width: 8%;
+    border: 1px solid black;
+ }
+ 
